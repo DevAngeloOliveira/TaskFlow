@@ -1,4 +1,4 @@
-# 🚀 TaskFlow
+# 🚀 TaskFlow (Em Desenvolvimento)
 
 <div align="center">
 
@@ -8,84 +8,87 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-**Uma plataforma moderna de gestão de projetos focada em produtividade e colaboração em equipe.**
+**Uma plataforma de gestão de projetos em desenvolvimento, focada em aprendizado e boas práticas.**
 
+[Sobre](#-sobre-o-projeto) •
 [Tecnologias](#-tecnologias) •
-[Funcionalidades](#-funcionalidades) •
-[Arquitetura](#-arquitetura) •
+[Estrutura](#-estrutura) •
 [Instalação](#-instalação) •
-[Documentação](#-documentação)
+[Roadmap](#-roadmap)
 
 </div>
 
 ## 📋 Sobre o Projeto
 
-O TaskFlow é uma solução completa para gestão de projetos e tarefas, desenvolvida com tecnologias modernas e seguindo as melhores práticas de desenvolvimento. O sistema oferece uma experiência fluida e intuitiva para gerenciamento de equipes, projetos e tarefas.
+O TaskFlow é um projeto em desenvolvimento que está sendo construído como uma plataforma de gestão de projetos. Este é um projeto de aprendizado onde estou aplicando e explorando diversas tecnologias modernas do desenvolvimento web.
 
-### 🎯 Principais Diferenciais
+### 🎯 Objetivos do Projeto
 
-- **Arquitetura Moderna**: Desenvolvido com React e NestJS, utilizando TypeScript para maior segurança e manutenibilidade
-- **Design Responsivo**: Interface adaptável a qualquer dispositivo com Tailwind CSS
-- **Alta Performance**: Otimizado para carregamento rápido e experiência fluida
-- **Escalabilidade**: Arquitetura em containers Docker pronta para escalar
-- **Segurança**: Implementação robusta de autenticação JWT e práticas de segurança
+- Aprender e aplicar tecnologias modernas de desenvolvimento
+- Implementar boas práticas de programação
+- Desenvolver uma aplicação completa (fullstack)
+- Explorar conceitos de DevOps e containerização
+- Criar uma base sólida para futuras melhorias
 
-## 💻 Tecnologias
+## 💻 Tecnologias em Uso
 
 ### Frontend
-- ⚛️ **React 18** - Biblioteca para construção de interfaces
-- 🔷 **TypeScript** - Superset JavaScript com tipagem estática
-- 🎨 **Tailwind CSS** - Framework CSS utilitário
-- 📦 **Redux Toolkit** - Gerenciamento de estado
-- ⚡ **Vite** - Build tool e bundler
+- ⚛️ **React** com TypeScript
+- 🎨 **Tailwind CSS** para estilização
+- 📦 **Redux** para gerenciamento de estado
+- ⚡ **Vite** como bundler
 
 ### Backend
-- 🦁 **NestJS** - Framework Node.js progressivo
-- 🐘 **PostgreSQL** - Banco de dados relacional
-- 🔑 **JWT** - Autenticação e autorização
-- 📝 **TypeORM** - ORM para TypeScript
+- 🦁 **NestJS** com TypeScript
+- 🐘 **PostgreSQL** como banco de dados
+- 🔑 **JWT** para autenticação
+- 📝 **TypeORM** para ORM
 
 ### DevOps
-- 🐳 **Docker** - Containerização
-- 🔄 **Docker Compose** - Orquestração de containers
-- 🌐 **Nginx** - Proxy reverso e load balancer
+- 🐳 **Docker** e Docker Compose
+- 🌐 **Nginx** como proxy reverso
 
-## ✨ Funcionalidades
-
-### Autenticação e Usuários
-- 🔐 Sistema completo de autenticação
-- 👤 Gerenciamento de perfis de usuário
-- 🔒 Controle de acesso baseado em roles
-
-### Gestão de Projetos
-- 📊 Dashboard de projetos
-- 👥 Gerenciamento de equipes
-- 📈 Acompanhamento de progresso
-
-### Gestão de Tarefas
-- ✅ Kanban board interativo
-- 🏷️ Sistema de tags e prioridades
-- ⏰ Controle de prazos e status
-
-## 🏗️ Arquitetura
+## 🏗️ Estrutura Atual
 
 ```
 taskflow/
-├── frontend/           # Aplicação React
+├── frontend/                 # Aplicação React
 │   ├── src/
-│   │   ├── components/ # Componentes reutilizáveis
-│   │   ├── pages/     # Páginas da aplicação
-│   │   ├── store/     # Estado global Redux
-│   │   └── services/  # Serviços e API
+│   │   ├── components/      # Componentes React
+│   │   ├── pages/          # Páginas
+│   │   ├── services/       # Integrações com API
+│   │   └── store/          # Estado global
 │   
-└── backend/           # API NestJS
+└── backend/                 # API NestJS
     ├── src/
-    │   ├── modules/   # Módulos da aplicação
-    │   ├── config/    # Configurações
-    │   └── shared/    # Recursos compartilhados
+    │   ├── modules/
+    │   │   ├── auth/       # Autenticação
+    │   │   ├── users/      # Usuários
+    │   │   ├── projects/   # Projetos
+    │   │   └── tasks/      # Tarefas
+    │   └── config/         # Configurações
 ```
 
+## ⚙️ Funcionalidades em Desenvolvimento
+
+### Módulo de Autenticação
+- Sistema de registro e login
+- Autenticação JWT
+- Gerenciamento de perfis
+
+### Módulo de Projetos
+- Criação de projetos
+- Gerenciamento de equipes
+- Acompanhamento de status
+
+### Módulo de Tarefas
+- Criação e atribuição de tarefas
+- Sistema de prioridades
+- Acompanhamento de progresso
+
 ## 🚀 Instalação
+
+> ⚠️ **Nota**: Este projeto está em desenvolvimento ativo e pode conter funcionalidades incompletas.
 
 1. **Clone o repositório**
 ```bash
@@ -93,7 +96,7 @@ git clone https://github.com/seu-usuario/taskflow.git
 cd taskflow
 ```
 
-2. **Configure as variáveis de ambiente**
+2. **Configure o ambiente**
 ```bash
 cp .env.example .env
 # Configure as variáveis necessárias
@@ -104,54 +107,44 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-4. **Acesse a aplicação**
+4. **Acesse**
 - Frontend: http://localhost:3000
 - Backend: http://localhost:3333
-- Documentação API: http://localhost:3333/api
 
-## 📚 Documentação
+## 📝 Roadmap
 
-### API Endpoints
+### Fase 1 (Em Andamento)
+- [x] Setup inicial do projeto
+- [x] Configuração do Docker
+- [x] Estrutura básica do backend
+- [x] Estrutura básica do frontend
+- [ ] Sistema de autenticação
+- [ ] CRUD básico de projetos
+- [ ] CRUD básico de tarefas
 
-#### Autenticação
-- `POST /auth/login` - Login de usuário
-- `POST /auth/register` - Registro de novo usuário
-
-#### Projetos
-- `GET /projects` - Lista todos os projetos
-- `POST /projects` - Cria novo projeto
-- `GET /projects/:id` - Detalhes do projeto
-- `PUT /projects/:id` - Atualiza projeto
-- `DELETE /projects/:id` - Remove projeto
-
-#### Tarefas
-- `GET /tasks` - Lista todas as tarefas
-- `POST /tasks` - Cria nova tarefa
-- `PUT /tasks/:id` - Atualiza tarefa
-- `DELETE /tasks/:id` - Remove tarefa
-
-## 🔜 Próximas Features
-
-- [ ] Chat em tempo real
+### Fase 2 (Planejado)
+- [ ] Dashboard de projetos
+- [ ] Kanban board
 - [ ] Sistema de notificações
-- [ ] Relatórios avançados
-- [ ] Integrações (Slack, GitHub)
+- [ ] Melhorias de UI/UX
+
+### Fase 3 (Futuro)
+- [ ] Chat em tempo real
+- [ ] Relatórios e analytics
+- [ ] Integrações externas
 - [ ] App mobile
 
-## 👨‍💻 Autor
+## 👨‍💻 Desenvolvedor
 
 **Gabriel**
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-%C3%A2ngelo-b71565267/)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DevAngeloOliveira/DevAngeloOliveira)
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seu-linkedin)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seu-github)
 
 ---
 
 <div align="center">
 
-Feito com ❤️ por Gabriel
+🚧 **Projeto em Desenvolvimento** 🚧
 
 </div>
